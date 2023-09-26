@@ -1,0 +1,183 @@
+@import './fonts.css';
+
+body {
+    font-family: PT Sans, Arial, Verdana, Tahoma;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 101px;
+    font-size: 28px;
+
+}
+
+.header {
+    padding-left: 5px;
+    padding-top: 5px;
+    background-color: #FFF;
+    z-index: 2;
+    position: relative;
+}
+
+.link-element {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-family: Francois One;
+    font-size: 36px;
+}
+
+.slash {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.nav__tab {
+    font-size: 20px;
+}
+
+.nav__tab-wrapper {
+    padding-top: 5px;
+    position: fixed;
+    left: 431px;
+}
+
+.lang-change__text {
+    font-family: Tourney;
+    font-size: 24px;
+}
+
+.nav__lang-change {
+    float: left;
+    padding-right: 50px;
+    padding-top: 5px;
+    margin: 0;
+    position: fixed;
+}
+
+
+.logo-wrapper {
+    position: fixed;
+    right: 332px;
+}
+
+.clear-fix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 39px;
+    padding-left: 10px;
+    position: sticky;
+    top: 120px;
+}
+
+.menu__item {
+    border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 8px;
+    letter-spacing: 1.44px;
+}
+
+.menu__item:not(:first-of-type) {
+    padding-top: 68px;
+}
+
+.main__bg-img {
+    position: absolute;
+    z-index: -1;
+    right: 212px;
+    top: 150px;
+    position: fixed;
+
+}
+
+.article {
+    padding-top: 61px;
+}
+
+.chapter {
+    padding-bottom: 95px;
+    padding-left: 16px;
+}
+
+.chapter__title {
+    font-size: 36px;
+    font-family: Francois One;
+    margin: 0;
+    display: block;
+    position: relative;
+    letter-spacing: 1.44px;
+}
+
+.chapter__title::before {
+    content: ' ';
+    width: 100px;
+    border-top: 8px solid #000;
+    position: absolute;
+    bottom: 68px;
+}
+
+.chapter__title::after {
+    content: 'Chapter 1';
+    font-family: PT Sans;
+    font-size: 18px;
+    position: relative;
+    bottom: 23px;
+    left: 9px;
+}
+
+.col-4 {
+    max-width: calc(100% / 12 * 4);
+}
+
+.col-8 {
+    max-width: calc(100% / 12 * 8);
+}
+
+.chapter__text {
+    padding-top: 40px;
+    line-height: 48px;
+    margin: 0;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.chapter__list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chapter__list_item::before {
+    content: '+ ';
+
+}
+
+.chapter__list-title {
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* .chapter__list_item {
+    padding-top: 38px;
+} */
+
+.html-example {
+    background-color: #DADADA;
+}
