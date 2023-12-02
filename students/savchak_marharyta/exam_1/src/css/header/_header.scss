@@ -1,0 +1,168 @@
+@import "./menu";
+
+.header {
+    background-color: $blue ;
+    // .header__title
+
+    &__title {
+        padding-top: 5px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 24px;
+        letter-spacing: 2.4px;
+        margin: 0;
+        font-weight: 700;
+        font-family: $logo-font;
+
+        @include media(xs) {
+            font-size: 18px;
+        }
+
+    }
+
+    &__title:hover {
+        color: $dark-gray;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px 15px;
+
+        @include media(md) {
+            padding: 15px 15px;
+        }
+
+        @include media(sm) {
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include media(xs) {
+            padding: 20px 20px;
+        }
+    }
+
+
+}
+
+
+.header__menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 38px;
+
+
+    @include media(sm) {
+        display: block;
+        position: relative;
+
+    }
+
+    // @include media(lg) {
+    //     padding-left: 50px;
+
+    // }
+
+    // @include media(md) {
+    //     padding-left: 110px;
+    // }
+
+    // @include media(sm) {
+    //     padding-left: 35px;
+    //     font-size: 10px;
+    // }
+
+    // @include media(xs) {
+    //     padding-left: 15px;
+    // }
+
+
+    &_link:hover {
+        color: $dark-gray;
+    }
+
+    &_link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $white;
+        font-family: $btn-font;
+        font-size: 14px;
+        letter-spacing: 1.4px;
+
+        @include media(lg) {
+            letter-spacing: .7px;
+        }
+
+        @include media(md) {
+            font-size: 13px;
+        }
+
+        @include media(xs) {
+            font-size: 12px;
+        }
+
+        // @include media(xxs) {
+        //     font-size: 8px;
+        // }
+
+    }
+
+    &_item {
+        position: relative;
+
+        @include media(sm) {
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+
+    &_item:hover {
+
+        .submenu {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+
+        }
+    }
+}
+
+.menu-open-input {
+    @include visuality-hidden;
+}
+
+.menu-open-label {
+
+    &-wrapper {
+        text-transform: uppercase;
+
+        @include media(sm) {
+            text-align: center;
+        }
+    }
+}
+
+.header__menu-wrapper {
+    @include media(sm) {
+        position: sticky;
+        width: 100%;
+        top: 58px;
+        background-color: $blue;
+        display: none;
+
+        .menu-open-input:checked~& {
+            display: block;
+        }
+
+
+    }
+}
